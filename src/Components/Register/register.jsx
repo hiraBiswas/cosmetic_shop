@@ -101,11 +101,11 @@ const Register = () => {
                
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-gradient-to-r from-darkPink to-lightPink text-white">Register</button>
+                <button className="btn bg-amber-600 text-white">Register</button>
               </div>
             </form>
             <div>
-              <p className="p-8 pt-0 text-xl font-medium">Already have an account? <NavLink to="/login" className="text-2xl font-semibold text-pink-700">Login</NavLink> here.</p>
+              <p className="p-8 pt-0 text-xl font-medium">Already have an account? <NavLink to="/login" className="text-2xl font-semibold text-amber-700">Login</NavLink> here.</p>
             </div>
           </div>
         </div>

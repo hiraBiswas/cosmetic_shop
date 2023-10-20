@@ -15,7 +15,8 @@ import UpdateProduct from './Components/UpdateProduct/UpdateProduct'
 import Details from './Components/Details/Details'
 import AuthProvider from './Components/Providers/AuthProvider';
 import Login from './Components/Login/Login';
-import Register from './Components/Register/register';
+import Register from './Components/Register/Register';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/myCart",
-        element: <MyCart></MyCart>,
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
       },
       {
         path: "/login",
@@ -53,14 +54,14 @@ const router = createBrowserRouter([
 
       {
         path: "/brand/:brand_name/details/:id",
-        element: <Details></Details>,
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5200/product/${params.id}`)
       }
       ,
 
       {
         path: "/addProduct",
-        element:<AddProduct></AddProduct>,
+        element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
       },
     ],
   },

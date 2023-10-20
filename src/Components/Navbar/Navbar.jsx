@@ -5,9 +5,9 @@ import { AuthContext } from '../Providers/AuthProvider';
 
 const Navbar = () => {
     const links =<>
-    <li><NavLink to="/">Home</NavLink></li>
-    <li><NavLink to="/addProduct">Add Product</NavLink></li>
-    <li><NavLink to="/myCart">My Cart</NavLink></li>
+    <li className="text-lg lg:text-xl font-semibold"><NavLink to="/">Home</NavLink></li>
+    <li className="text-lg lg:text-xl font-semibold"><NavLink to="/addProduct">Add Product</NavLink></li>
+    <li className="text-lg lg:text-xl font-semibold"><NavLink to="/myCart">My Cart</NavLink></li>
     
     </>
 
@@ -36,7 +36,7 @@ const handleSignOut=()=>{
     </div>
     <div className="flex items-center">
         <img className="h-24 w-24 hidden lg:block" src="./logo2.png" alt="" />
-    <a className="btn btn-ghost  normal-case text-xl">𝓖𝓵𝓪𝓶𝓸𝓾𝓻<span className="text-amber-600 fancy">𝓖𝓵𝓮𝓪𝓶</span></a>
+    <a className="btn btn-ghost  normal-case text-2xl hidden lg:block">𝓖𝓵𝓪𝓶𝓸𝓾𝓻<span className="text-amber-600 fancy">𝓖𝓵𝓮𝓪𝓶</span></a>
     </div>
   </div>
   <div className="navbar-center hidden lg:flex">

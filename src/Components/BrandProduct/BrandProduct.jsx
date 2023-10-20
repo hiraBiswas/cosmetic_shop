@@ -9,7 +9,7 @@ const BrandProduct = () => {
     const filteredProducts = brandProducts.filter(brandProduct => brandProduct.brandName === brand_name);
     console.log(filteredProducts);
     return (
-        <div className="">
+        <div className="container mx-auto">
           <div className="mt-10 bg-amber-50 py-10 px-5 drop-shadow rounded-xl grid gap-8 grid-cols-1 lg:grid-cols-3"> 
           {filteredProducts.length > 0 ? (
                 
