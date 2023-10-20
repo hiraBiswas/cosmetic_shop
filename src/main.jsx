@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import ErrorPage from '../src/Components/ErrorPage/ErrorPage.jsx'
 import {
   createBrowserRouter,
@@ -14,6 +13,9 @@ import AddProduct from './Components/AddProduct/AddProduct'
 import BrandProduct from './Components/BrandProduct/BrandProduct'
 import UpdateProduct from './Components/UpdateProduct/UpdateProduct'
 import Details from './Components/Details/Details'
+import AuthProvider from './Components/Providers/AuthProvider';
+import Login from './Components/Login/Login';
+import Register from './Components/Register/register';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: "/myCart",
         element: <MyCart></MyCart>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
 
       {
@@ -57,6 +67,8 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+<AuthProvider>
+<RouterProvider router={router} />
+</AuthProvider>
   </React.StrictMode>,
 )

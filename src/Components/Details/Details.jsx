@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const Details = () => {
@@ -11,15 +11,21 @@ const Details = () => {
             <div>
                 <img src={image} alt="" />
             </div>
-            <div className="text-start">
-                <h1 className="text-xl font-semibold lg:text-2xl " ><span >Product Name : </span> {name}</h1>
-                <h3>Type : {type}</h3>
-                <h3>Brand : {brandName}</h3>
-                <h3>Price : {price}</h3>
-                <h3>Rating : {rating}</h3>
+            <div className="text-start ">
+                <h1 className="text-xl py-4 font-semibold lg:text-2xl " ><span >Product Name : </span> {name}</h1>
+                <h3 className="text-lg">Type : {type}</h3>
+                <h3 className="py-2 text-lg">Brand : {brandName}</h3>
+                <h3 className="text-lg">Price : {price}</h3>
+                <h3 className="py-2 text-lg">Rating : {rating}</h3>
+                <Link><button className="btn bg-amber-500" >Add to cart</button></Link>
             </div>
            </div>
-        </div>
+         
+            <h3 className="text-xl text-start">
+           <span className="font-bold text-xl "> Description:</span> {description}
+           </h3>
+           </div>
+       
     );
 };
 
