@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import BrandCard from "../BrandCard/BrandCard";
+import WhyUs from "../WhyUs/WhyUs";
 
 const Home = () => {
     const brands=useLoaderData()
@@ -19,6 +20,7 @@ const Home = () => {
             }
            </div>
            </div>
+           <WhyUs></WhyUs>
         </div>
     );
 };
