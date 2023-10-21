@@ -1,4 +1,5 @@
 import { Link, useLoaderData } from "react-router-dom";
+import Rating from "../Rating/Rating";
 
 
 const Details = () => {
@@ -16,7 +17,11 @@ const Details = () => {
                 <h3 className="text-lg">Type : {type}</h3>
                 <h3 className="py-2 text-lg">Brand : {brandName}</h3>
                 <h3 className="text-lg">Price : {price}</h3>
-                <h3 className="py-2 text-lg">Rating : {rating}</h3>
+                <div className="text-start lg:text-lg py-2 font-medium">
+            Rating:
+            <Rating rating={rating}></Rating> 
+            <span className="ml-2"></span>
+          </div>
                 <Link><button className="btn bg-amber-500" >Add to cart</button></Link>
             </div>
            </div>

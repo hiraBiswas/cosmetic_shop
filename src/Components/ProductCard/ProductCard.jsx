@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Rating from "../Rating/Rating";
 
 
 const ProductCard = ({brandProduct }) => {
@@ -12,7 +13,11 @@ const ProductCard = ({brandProduct }) => {
    <h4 className="text-start lg:text-lg font-medium"> Type : {type}</h4>
    <h4 className="text-start lg:text-lg font-medium">Brand Name : {brandName} </h4>
    <h4 className="text-start lg:text-lg font-medium">Price : {price} </h4>
-   <h4 className="text-start lg:text-lg font-medium">Rating : {rating} </h4>
+   <div className="text-start lg:text-lg font-medium">
+            Rating:
+            <Rating rating={rating} />
+            <span className="ml-2"></span>
+          </div>
     <div className="card-actions justify-between">
       <Link to={`/brand/${brandName}/details/${_id}`}><button className="btn bg-amber-600">Details</button></Link>
      <Link to={`/brand/${brandName}/updateProduct/${_id}`}> <button className="btn bg-amber-600">Update</button></Link>

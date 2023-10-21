@@ -1,5 +1,12 @@
-li NavLink  .active{
-    background-color: none;
-    color: brown;
-}
 
+/* Light Theme */
+[data-theme='light'] {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Dark Theme */
+  [data-theme='dark'] {
+    background-color: black;
+    color: white;
+  }
