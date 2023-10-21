@@ -15,7 +15,7 @@ const [theme, setTheme] = useState(
   localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
 );
 
-// update state on toggle
+
 const handleToggle = (e) => {
   if (e.target.checked) {
     setTheme("dark");
@@ -24,11 +24,9 @@ const handleToggle = (e) => {
   }
 };
 
-// set theme state in localstorage on mount & also update localstorage on state change
 useEffect(() => {
   localStorage.setItem("theme", theme);
   const localTheme = localStorage.getItem("theme");
-  // add custom data-theme attribute to html tag required to update theme using DaisyUI
   document.querySelector("html").setAttribute("data-theme", localTheme);
 }, [theme]);
 
@@ -57,7 +55,7 @@ const handleSignOut=()=>{
       </ul>
     </div>
     <div className="flex items-center">
-        <img className="h-24 w-24 hidden lg:block" src="./logo2.png" alt="" />
+        <img className="h-24 w-24 hidden lg:block" src="https://i.ibb.co/y6yk8Yd/logo2.png" alt="" />
     <a className="btn btn-ghost  normal-case text-2xl hidden lg:block">𝓖𝓵𝓪𝓶𝓸𝓾𝓻<span className="text-amber-600 fancy">𝓖𝓵𝓮𝓪𝓶</span></a>
     </div>
   </div>

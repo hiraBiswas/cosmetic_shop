@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="mt-10 lg:mt-16">
             <footer className="footer p-10 bg-black text-neutral-content">
   <aside>
-   <img className="h-32 w-32" src="./logo2.png" alt="" />
+   <img className="h-32 w-32" src="https://i.ibb.co/y6yk8Yd/logo2.png" alt="" />
     <p className="text-amber-500 text-xl lg:text-2xl">𝓰𝓵𝓪𝓶𝓸𝓾𝓻𝓖𝓵𝓮𝓪𝓶</p>
   </aside> 
   <nav>

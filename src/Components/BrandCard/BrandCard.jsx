@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const brands = ({brand}) => {
+const BrandCard = ({brand}) => {
     return (
         <div>
           <Link to={`/brand/${brand.brand_name}`}>
@@ -16,4 +16,4 @@ const brands = ({brand}) => {
     );
 };
 
-export default brands;
+export default BrandCard;

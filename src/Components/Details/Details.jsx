@@ -1,11 +1,52 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Rating from "../Rating/Rating";
 
+import { useContext, useState } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
+
 
 const Details = () => {
+    const { user, signIn, loading } = useContext(AuthContext);
     const productDetails = useLoaderData();
     console.log(productDetails)
     const {name, rating, price, brandName, description, image, type}=productDetails
+    
+    const [addToCartStatus, setAddToCartStatus] = useState('');
+    const addToCart = () => {
+        if (user) {
+            
+            const cartItem = {
+                userId: user.email, 
+                productDetails: productDetails, 
+            };
+    
+            fetch('http://localhost:5200/cart', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(cartItem),
+              })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Failed to add product to cart');
+                }
+            })
+            .then(data => {
+                setAddToCartStatus('Product added to cart');
+            })
+            .catch(error => {
+                setAddToCartStatus('Failed to add product to cart');
+            });
+        } else {
+            setAddToCartStatus('Please sign in to add to the cart');
+            // Implement your sign-in mechanism here or redirect to a sign-in page.
+        }
+    }
+
+
     return (
         <div className="mt-5 lg:mt-10">
            <div className="p-5 lg:p-12 flex flex-col gap-10 lg:flex-row lg:items-center ">
@@ -22,7 +63,7 @@ const Details = () => {
             <Rating rating={rating}></Rating> 
             <span className="ml-2"></span>
           </div>
-                <Link><button className="btn bg-amber-500" >Add to cart</button></Link>
+                <Link to="/myCart"><button className="btn bg-amber-500" onClick={addToCart} >Add to cart</button></Link>
             </div>
            </div>
          
