@@ -26,7 +26,6 @@ const AddProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          // Show a success toast
           toast.success('Product added successfully', {
             position: 'top-center',
             autoClose: 2000, 
@@ -34,7 +33,9 @@ const AddProduct = () => {
 
           form.reset();
         }
+        
       });
+     
   };
 
   return (
