@@ -7,7 +7,7 @@ AOS.init({
 
 const Showroom = () => {
   return (
-    <div data-aos="fade-up" className="container mx-auto p-5 rounded-xl mt-10 lg:mt-20 lg:p-10">
+    <div data-aos="fade-up" className="container  mx-auto rounded-xl mt-10 lg:mt-20">
       <h2 className='text-2xl text-center font-bold py-5 lg:text-4xl lg:py-10'> 𝓞𝓾𝓻 <span className='text-amber-500'>𝓞𝓾𝓽𝓵𝓮𝓽</span> 𝓐𝓭𝓭𝓻𝓮𝓼𝓼</h2>
       <div className=" grid grid-cols-1 gap-6 lg:grid-cols-2">
 

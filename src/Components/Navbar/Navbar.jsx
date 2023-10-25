@@ -50,7 +50,7 @@ const handleSignOut=()=>{
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52">
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow z-40 bg-white text-amber-600 rounded-box w-52 ">
        {links}
       </ul>
     </div>
@@ -59,12 +59,12 @@ const handleSignOut=()=>{
     <a className="btn btn-ghost  normal-case text-2xl hidden lg:block">𝓖𝓵𝓪𝓶𝓸𝓾𝓻<span className="text-amber-600 fancy">𝓖𝓵𝓮𝓪𝓶</span></a>
     </div>
   </div>
-  <div className="navbar-center hidden lg:flex">
+  <div className="navbar-center hidden  lg:flex">
     <ul className="menu menu-horizontal px-1">
       {links}
     </ul>
   </div>
-  <div className="navbar-end">
+  <div className="navbar-end sm:-mr-6">
   {user ? (
             <div className="flex items-center">
              

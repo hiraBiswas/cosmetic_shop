@@ -35,10 +35,7 @@ const UpdateProduct = () => {
       .then((data) => {
         console.log(data);
         if (data.modifiedCount > 0) {
-          toast.success('Product updated Successfully', {
-            position: 'top-center',
-            autoClose: 2000, // Auto-close the toast after 2 seconds
-          });
+          toast.success('Product updated Successfully');
         }
       });
   };

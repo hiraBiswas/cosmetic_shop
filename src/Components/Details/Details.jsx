@@ -69,7 +69,7 @@ const Details = () => {
             </div>
            </div>
          
-            <h3 className="text-xl text-start">
+            <h3 className="text-xl text-start p-5">
            <span className="font-bold text-xl "> Description:</span> {description}
            </h3>
            <ToastContainer />

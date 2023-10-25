@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
+import  { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Providers/AuthProvider';
 import { useLoaderData } from 'react-router-dom';
-import CartItem from '../CartItem/CartItem';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -22,6 +21,7 @@ const MyCart = () => {
                 console.error('Error fetching cart data:', error);
             });
     }, [user.email]);
+    
 
     const handleDeleteItem = (itemId) => {
         fetch(`http://localhost:5200/cart/${itemId}`, {
@@ -29,7 +29,7 @@ const MyCart = () => {
         })
             .then(response => {
                 if (response.ok) {
-                    const remainingData = loadedData.filter(dataItem => dataItem._id !== itemId);
+                    const remainingData = cartData.filter(dataItem => dataItem._id !== itemId);
                     toast.success('Product deleted Successfully')
                     setCartData(remainingData);
                 } else {
@@ -46,7 +46,7 @@ const MyCart = () => {
         <div className="container mx-auto mt-10 lg:mt-16">
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
                 {cartData.map(item => (
-                    <div className="card w-96 bg-base-100 shadow-xl" key={item._id}>
+                    <div className="card  bg-base-100 shadow-xl" key={item._id}>
                         <figure className="px-10 pt-10">
                             <img src={item.productDetails?.image} alt="Shoes" className="rounded-xl" />
                         </figure>

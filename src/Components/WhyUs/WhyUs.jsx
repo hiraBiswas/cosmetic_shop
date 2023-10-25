@@ -16,7 +16,7 @@ const WhyUs = () => {
    
     return (
       <div>
-        <h1 className='text-2xl mt-10 text-center font-semibold lg:text-3xl lg:mt-16 text-black'>𝓦𝓱𝔂 𝓒𝓱𝓸𝓸𝓼𝓮<span className='text-amber-600'> 𝓰𝓵𝓪𝓶𝓸𝓾𝓻𝓖𝓵𝓮𝓪𝓶</span> </h1>
+        <h1 className='text-2xl mt-10 text-center font-semibold lg:text-3xl lg:mt-20 text-black'>𝓦𝓱𝔂 𝓒𝓱𝓸𝓸𝓼𝓮<span className='text-amber-600'> 𝓰𝓵𝓪𝓶𝓸𝓾𝓻𝓖𝓵𝓮𝓪𝓶</span> </h1>
         <div data-aos="fade-up" className="bg-amber-500 mt-5 container rounded-lg flex flex-col lg:mx-w-full lg:mx-auto   gap-6 lg:flex-row lg:justify-center items-center">
        
             <div className="p-5 text-center flex-1">
