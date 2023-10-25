@@ -1,5 +1,7 @@
-https://cosmetic-and-beauty.web.app
+https://cosmetic-and-beauty.web.app/
 
+
+Features of my website: 
 1. I shown all the available bran on home page.
 2. When brands are clicked, then it shows tis branded product.
 3.We can add product here.
