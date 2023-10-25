@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       {
         path: "/myCart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch('http://localhost:5200/cart')
+        loader: () => fetch('https://cosmetic-and-beauty-server.vercel.app/cart')
       },
       {
         path: "/login",
@@ -45,18 +45,18 @@ const router = createBrowserRouter([
       {
         path: "/brand/:brand_name",
         element: <BrandProduct></BrandProduct>,
-        loader: () => fetch('http://localhost:5200/product')
+        loader: () => fetch('https://cosmetic-and-beauty-server.vercel.app/product')
       },
       {
         path: "/brand/:brand_name/updateProduct/:id",
         element: <UpdateProduct></UpdateProduct>,
-        loader: ({ params }) => fetch(`http://localhost:5200/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://cosmetic-and-beauty-server.vercel.app/product/${params.id}`)
       } ,
 
       {
         path: "/brand/:brand_name/details/:id",
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5200/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://cosmetic-and-beauty-server.vercel.app/product/${params.id}`)
       }
       ,
 

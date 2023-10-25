@@ -64,7 +64,7 @@ const handleSignOut=()=>{
       {links}
     </ul>
   </div>
-  <div className="navbar-end sm:-mr-6">
+  <div className="navbar-end ">
   {user ? (
             <div className="flex items-center">
              

@@ -21,7 +21,7 @@ const Details = () => {
                 productDetails: productDetails, 
             };
     
-            fetch('http://localhost:5200/cart', {
+            fetch('https://cosmetic-and-beauty-server.vercel.app/cart', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',

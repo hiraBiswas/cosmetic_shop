@@ -24,7 +24,7 @@ const UpdateProduct = () => {
 
     console.log(updateProduct);
 
-    fetch(`http://localhost:5200/product/${id}`, {
+    fetch(`https://cosmetic-and-beauty-server.vercel.app/product/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',

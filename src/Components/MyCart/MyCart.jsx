@@ -11,7 +11,7 @@ const MyCart = () => {
     console.log(loadedData);
 
     useEffect(() => {
-        fetch('http://localhost:5200/cart')
+        fetch('https://cosmetic-and-beauty-server.vercel.app/cart')
             .then(response => response.json())
             .then(data => {
                 const userCartItems = data.filter(item => item.userId === user.email);
@@ -24,7 +24,7 @@ const MyCart = () => {
     
 
     const handleDeleteItem = (itemId) => {
-        fetch(`http://localhost:5200/cart/${itemId}`, {
+        fetch(`https://cosmetic-and-beauty-server.vercel.app/cart/${itemId}`, {
             method: 'DELETE',
         })
             .then(response => {

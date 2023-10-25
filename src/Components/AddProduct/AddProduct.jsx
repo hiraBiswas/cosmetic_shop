@@ -16,7 +16,7 @@ const AddProduct = () => {
     const description = form.description.value;
     const newProduct = { name, image, price, brandName, type, description, rating };
 
-    fetch('http://localhost:5200/product', {
+    fetch('https://cosmetic-and-beauty-server.vercel.app/product', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
