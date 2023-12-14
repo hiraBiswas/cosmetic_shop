@@ -61,13 +61,24 @@ const AddProduct = () => {
 
 
 
-                    <div className="flex flex-col gap-6 w-full lg:flex-row">
+                    <div className="flex flex-col gap-6 w-full items-center lg:flex-row">
                         <div className="form-control flex-1">
-                            <label className="label">
-                                <span className="label-text">Brand Name</span>
-                            </label>
-                            <input type="text" placeholder="brand name" name="brandName" className="input input-bordered" required />
-                        </div>
+                        <label className="input-group">
+                        <span className="label-text bg-transparent -ml-2 my-2">Brand Name</span>
+                        </label>
+                        <label className="input-group">
+            <select name="brandName" className="input input-bordered w-full"  defaultValue="">
+                <option value="" disabled>Pick the brand name.</option>
+                <option value="Focallure">Focallure</option>
+                <option value="Simple">Simple</option>
+                <option value="CeraVe">CeraVe</option>
+                <option value="Sakura">Sakura</option>
+                <option value="Dove">Dove</option>
+                <option value="Pastel">Pastel</option>
+               
+              </select>
+            </label>
+            </div>
                         <div className="form-control flex-1">
                             <label className="label">
                                 <span className="label-text">Type</span>

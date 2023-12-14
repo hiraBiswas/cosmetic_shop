@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch('/brand.json')
+
       },
       {
         path: "/myCart",
@@ -63,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: "/addProduct",
         element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
+      },
+      {
+        path: "/myCart",
+        element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
       },
     ],
   },

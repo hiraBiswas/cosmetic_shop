@@ -11,13 +11,13 @@ const PrivateRoute = ({children}) => {
     console.log(location.pathname)
    
     if(loading){
-        return <span className="loading loading-bars loading-lg"></span>
+        return <span className="loading loading-bars loading-5xl text-amber-600"></span>
     }
     
     if(user){
         return children
     }
-    return <Navigate state={location.pathname} to="/login"></Navigate>
+    return <Navigate state={location.pathname} to="/login" replace></Navigate>
 };
 
 export default PrivateRoute; 

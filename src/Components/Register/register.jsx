@@ -56,6 +56,7 @@ const Register = () => {
     
     })
     .catch(error=>{
+      toast.error(error.message)
      console.error( "Registration error:", error.message)
     })
     
